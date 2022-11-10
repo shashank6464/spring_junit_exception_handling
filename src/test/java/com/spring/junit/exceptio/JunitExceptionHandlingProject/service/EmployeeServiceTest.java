@@ -68,7 +68,7 @@ public class EmployeeServiceTest {
 
         assertEquals(1, employeeResult.getId());
         assertEquals("Alice", employeeResult.getName());
-        assertEquals("alice@gmail.com", employeeResult.getEmail());
+        assertEquals("asdf@email.com", employeeResult.getEmail());
     }
 
 
@@ -104,10 +104,14 @@ public class EmployeeServiceTest {
 
         when(repository.findAll()).thenReturn(employeeList);
 
+
         service.removeEmployee(0L);
         employeeList.remove(0);
 
         assertEquals(0, service.getEmployees().size());
+
+
+
     }
 
 }

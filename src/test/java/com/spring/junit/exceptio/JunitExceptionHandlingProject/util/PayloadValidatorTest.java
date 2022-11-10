@@ -12,7 +12,7 @@ public class PayloadValidatorTest {
     @Test
     public void validatePayload(){
 
-        Employee employee = new Employee(1, "Alice", "alice@email.com", "alice123");
+        Employee employee = new Employee(1, "Alice", "asdf@email.com", "3wergw5erge");
 
         assertEquals(false, PayloadValidation.createdPayloadValidation(employee));
 
@@ -20,7 +20,7 @@ public class PayloadValidatorTest {
 
     @Test
     public void validateInvalidPayload(){
-        Employee employee = new Employee(0, "Alice", "alice@email.com", "alice123");
+        Employee employee = new Employee(0, "Alice", "asdf@email.com", "3wergw5erge");
 
         assertEquals(true, PayloadValidation.createdPayloadValidation(employee));
 
